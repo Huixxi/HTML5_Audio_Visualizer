@@ -12,8 +12,14 @@ Screen Capture
 
 ![alt tag](https://raw.github.com/Huixxi/HTML5_Audio_Visualizer/main/sources/image.png)
 
-Local Run  
-```
-python -m http.server
+Local Run 
+--- 
+``` shell
+$ python -m http.server
 ```
 then open http://localhost:8000/ in your browser.
+
+Features
+---
+* Visualize any audio file in any file form.
+* Support capture the audio spectrum and download as video.
