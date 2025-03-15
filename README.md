@@ -21,5 +21,5 @@ then open http://localhost:8000/ in your browser.
 
 Features
 ---
-* Visualize any audio file in any file form.
+* Visualize any audio file in any file types.
 * Support capture the audio spectrum and download as video.
