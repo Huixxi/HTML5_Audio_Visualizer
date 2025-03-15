@@ -1,21 +1,194 @@
-html, body {
-    margin: 0;
-    font-family: arial, "Microsoft YaHei";
-    background-color: #272822;
-    color: #FEFEFE;
-}
-#fileWrapper{
-	transition:all 0.5s ease;
-}
-#fileWrapper:hover{
-	opacity: 1!important;
+/* Modern Audio Visualizer Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #7c4dff;
+    --secondary-color: #b388ff;
+    --dark-bg: #1e1e2e;
+    --card-bg: #2a2a3a;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3cc;
+    --success-color: #52e3a8;
+    --error-color: #ff6b6b;
 }
 
-#visualizer_wrapper{
-	text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-footer{
-	position: fixed;
-	bottom: 2px;
-	color:#aaa;
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* File Upload Styling */
+#fileWrapper {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    opacity: 0.9;
+}
+
+#fileWrapper:hover {
+    opacity: 1 !important;
+    transform: translateY(-5px);
+}
+
+#info {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    letter-spacing: 0.5px;
+}
+
+label[for="uploadedFile"] {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+#uploadedFile {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed var(--secondary-color);
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#uploadedFile:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
+}
+
+/* Visualizer Styling */
+#visualizer_wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+canvas {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Recording Controls Styling */
+#recording_controls {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#recording_controls button {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+    letter-spacing: 0.5px;
+}
+
+#recording_controls button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#recording_controls button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#recording_controls button:disabled {
+    background: #666;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#recordingStatus {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #wrapper {
+        padding: 1rem;
+    }
+    
+    #info {
+        font-size: 1.2rem;
+    }
+    
+    #recording_controls button {
+        padding: 10px 20px;
+        margin: 5px;
+    }
 }

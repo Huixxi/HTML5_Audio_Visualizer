@@ -1,5 +1,6 @@
 MIT License
 
+Copyright (c) 2025 Huixxi
 Copyright (c) 2016 Wayou Liu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

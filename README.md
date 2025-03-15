@@ -10,4 +10,10 @@ Demo
 Screen Capture
 ---
 
-![alt tag](https://raw.github.com/Wayou/HTML5_Audio_Visualizer/master/sources/screencapture.png)
+![alt tag](https://raw.github.com/Huixxi/HTML5_Audio_Visualizer/main/sources/image.png)
+
+Local Run  
+```
+python -m http.server
+```
+then open http://localhost:8000/ in your browser.
