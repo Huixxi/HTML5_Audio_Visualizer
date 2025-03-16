@@ -10,7 +10,8 @@ Demo
 Screen Capture
 ---
 
-![alt tag](https://raw.github.com/Huixxi/HTML5_Audio_Visualizer/main/sources/image.png)
+![alt tag](https://raw.github.com/Huixxi/HTML5_Audio_Visualizer/main/sources/bar.png)
+![alt tag](https://raw.github.com/Huixxi/HTML5_Audio_Visualizer/main/sources/circle.png)
 
 Local Run 
 --- 
@@ -23,3 +24,5 @@ Features
 ---
 * Visualize any audio file in any file types.
 * Support capture the audio spectrum and download as video.
+* Support "bar" and "circle" two form.
+* Support richer color themes and flexibility.
